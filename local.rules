@@ -1,0 +1,18 @@
+# CodeAlpha - Custom Suricata Rules
+# Task 4: Network Intrusion Detection System
+
+# Rule 1: Detect ICMP Ping Scan
+alert icmp any any -> $HOME_NET any (msg:"ICMP Ping Scan Detected"; itype:8; threshold:type threshold, track by_src, count 5, seconds 2; sid:9000001; rev:1;)
+
+# Rule 2: Detect SSH Brute Force
+alert tcp any any -> $HOME_NET 22 (msg:"SSH Brute Force Attempt"; flow:to_server,established; threshold:type threshold, track by_src, count 5, seconds 10; sid:9000002; rev:1;)
+
+# Rule 3: Detect Nmap Port Scan
+alert tcp any any -> $HOME_NET any (msg:"Nmap Port Scan Detected"; flags:S; threshold:type threshold, track by_src, count 20, seconds 3; sid:9000003; rev:1;)
+
+# Rule 4: Detect HTTP SQL Injection Attempt
+alert http any any -> any any (msg:"SQL Injection Attempt Detected"; content:"union select"; nocase; http_uri; sid:9000004; rev:1;)
+
+# Rule 5: Detect Command Injection Attempt
+alert http any any -> any any (msg:"Command Injection Attempt Detected"; content:"/etc/passwd"; http_uri; sid:9000005; rev:1;)
+
