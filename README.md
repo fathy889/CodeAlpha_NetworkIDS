@@ -1,4 +1,4 @@
-# 🛡️ CodeAlpha — Network Intrusion Detection System
+# 🛡️ Network Intrusion Detection System
 ### Task 4 | Cyber Security Internship
 ---
 ## 📌 Description
@@ -50,7 +50,7 @@ CodeAlpha_NetworkIDS/
 ```
 ---
 ## 👤 Author
-**Fathy Wael** — CodeAlpha Cyber Security Intern
+**Fathy Wael** — Cyber Security Intern
 GitHub: [@fathy889](https://github.com/fathy889)
 ---
-*CodeAlpha Cyber Security Internship — Task 4*
+*Cyber Security Internship — Task 4*
